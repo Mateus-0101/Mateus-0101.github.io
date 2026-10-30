@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mateus Antunes | Engenheiro da Computação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F7; --surface:#FFFFFF; --ink:#101828; --muted:#475467; --line:#D0D5DD; --accent:#1F4FD8; --accent-ink:#FFFFFF;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif; --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0C1220; --surface:#141C2E; --ink:#EEF2FA; --muted:#A5B1C8; --line:#2A3550; --accent:#7C9CFF; --accent-ink:#0C1220; color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0C1220; --surface:#141C2E; --ink:#EEF2FA; --muted:#A5B1C8; --line:#2A3550; --accent:#7C9CFF; --accent-ink:#0C1220; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+header.hero{padding:72px 0 40px}
+h1{font:800 clamp(2.6rem,8vw,5.2rem)/0.98 var(--display);letter-spacing:-0.03em;margin:0 0 20px}
+.roles{font:500 1.15rem/1.5 var(--display);color:var(--muted);margin:0 0 32px;max-width:36ch}
+.wave{width:100%;height:auto;display:block;margin:8px 0 32px}
+.wave path{fill:none;stroke:var(--accent);stroke-width:3;stroke-linejoin:miter;stroke-dasharray:1800;stroke-dashoffset:1800;animation:draw 2.4s ease-out .2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.wave path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+.contacts{display:flex;flex-wrap:wrap;gap:12px;margin:0;padding:0;list-style:none}
+.contacts a{display:inline-block;padding:11px 20px;border:1.5px solid var(--ink);border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem}
+.contacts a.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.contacts a:hover{background:var(--ink);color:var(--bg)}
+.contacts a.primary:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 1.9rem/1.2 var(--display);letter-spacing:-0.01em;margin:0 0 24px}
+p{margin:0 0 1em;max-width:68ch}
+.skills{display:grid;grid-template-columns:200px 1fr;gap:0 32px;margin:0}
+.skills dt{font-weight:600;padding:14px 0;border-top:1px solid var(--line)}
+.skills dd{margin:0;padding:14px 0;border-top:1px solid var(--line);color:var(--muted)}
+.skills dt:first-of-type,.skills dt:first-of-type+dd{border-top:0}
+.tl{list-style:none;margin:0;padding:0 0 0 28px;border-left:3px solid var(--accent)}
+.tl li{position:relative;padding-bottom:36px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-37px;top:8px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl h3{font:700 1.25rem/1.3 var(--display);margin:0}
+.tl .meta{color:var(--muted);margin:2px 0 10px;font-size:.95rem}
+.tl p{margin:0 0 .5em}
+.edu{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px}
+.edu h3{font:700 1.3rem/1.3 var(--display);margin:0 0 4px}
+.edu .meta{color:var(--muted);margin:0 0 14px}
+.edu p:last-child{margin:0}
+.certs{margin:0;padding:0;list-style:none}
+.certs li{padding:12px 0;border-top:1px solid var(--line)}
+.certs li:first-child{border-top:0}
+.certs span{color:var(--muted)}
+.feat{background:var(--surface);border:1.5px solid var(--accent);border-radius:16px;padding:28px;margin-bottom:28px}
+.feat .eyebrow{font-size:.8rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px}
+.feat h3{font:700 1.5rem/1.25 var(--display);margin:0 0 10px}
+.feat p{color:var(--muted)}
+.feat .tags{font-weight:600;color:var(--ink);font-size:.95rem;margin:0 0 18px}
+.more{font:700 1.1rem/1.3 var(--display);margin:0 0 14px}
+.projs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:0 0 28px;padding:0;list-style:none}
+.projs a{display:flex;flex-direction:column;height:100%;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:12px;text-decoration:none}
+.projs a:hover{border-color:var(--accent)}
+.projs h3{font:700 1.1rem/1.3 var(--display);margin:0 0 6px}
+.projs p{font-size:.95rem;line-height:1.5;color:var(--muted);margin:0 0 14px;flex:1}
+.projs .tag{font-size:.85rem;font-weight:600;color:var(--accent)}
+footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+@media (max-width:640px){
+  body{font-size:16px}
+  header.hero{padding-top:48px}
+  .skills{grid-template-columns:1fr}
+  .skills dt{padding-bottom:0;border-top:1px solid var(--line)}
+  .skills dd{border-top:0;padding-top:4px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>Mateus Antunes Dias Rodrigues</h1>
+    <p class="roles">Engenheiro da Computação. Desenvolvedor, analista de dados e analista de TI júnior.</p>
+    <svg class="wave" viewBox="0 0 900 70" role="img" aria-label="Forma de onda de um sinal digital, referência à formação em hardware e VHDL" preserveAspectRatio="none">
+      <path d="M0 55 H60 V15 H140 V55 H190 V15 H230 V55 H330 V15 H380 V55 H420 V15 H520 V55 H570 V15 H610 V55 H710 V15 H760 V55 H800 V15 H900"/>
+    </svg>
+    <ul class="contacts">
+      <li><a class="primary" href="https://wa.me/5561996775527">WhatsApp</a></li>
+      <li><a href="mailto:mateusantunes2342@gmail.com">E-mail</a></li>
+      <li><a href="https://www.linkedin.com/in/mateus-antunes-1a7704234" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/Mateus-0101" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://mateus-0101.github.io/english.html" lang="en">English</a></li>
+    </ul>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>Sou formado em Engenharia da Computação pelo IESB (2025), com láurea acadêmica. Tenho base sólida em desenvolvimento de software, bancos de dados e análise de dados, e programo em Python, Java, JavaScript/Node.js, C++ e C.</p>
+    <p>Minha experiência prática vem do monitoramento de operações logísticas e da geração de relatórios operacionais com apoio de tecnologia. Meu inglês é avançado, com certificação FCE da Cambridge.</p>
+    <p>Estou buscando uma vaga de Desenvolvedor Júnior, Analista de Dados Júnior ou Analista de TI Júnior.</p>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades técnicas</h2>
+    <dl class="skills">
+      <dt>Linguagens</dt><dd>Python, Java, JavaScript, Node.js, C++, C, Shell Script</dd>
+      <dt>Banco de dados</dt><dd>SQL, PostgreSQL</dd>
+      <dt>Back-end e integração</dt><dd>REST API, Node.js</dd>
+      <dt>Sistemas e infraestrutura</dt><dd>Linux (comandos básicos), Shell Script, noções de cibersegurança</dd>
+      <dt>Outras</dt><dd>Low-Code, VHDL, eletrônica básica e análise de circuitos, relatórios operacionais</dd>
+      <dt>Idiomas</dt><dd>Português (nativo); inglês avançado (First Certificate in English)</dd>
+    </dl>
+  </section>
+
+  <section id="experiencia">
+    <h2>Experiência profissional</h2>
+    <ul class="tl">
+      <li>
+        <h3>Analista de Operações (Transporte Escolar)</h3>
+        <p class="meta">JS Comunicações &amp; Serviços em Geral LTDA. | dez/2025 a jan/2026</p>
+        <p>Monitoramento e gestão das rotinas operacionais diárias do transporte escolar.</p>
+        <p>Criação de relatórios das operações de transporte, aplicando conhecimentos de tecnologia.</p>
+      </li>
+      <li>
+        <h3>Estagiário</h3>
+        <p class="meta">Sociedade de Transportes Coletivos de Brasília (TCB) | nov/2023 a nov/2025</p>
+        <p>Atuação em rotinas administrativas relacionadas à gestão do transporte escolar.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="formacao">
+    <h2>Formação acadêmica</h2>
+    <div class="edu">
+      <h3>Bacharelado em Engenharia da Computação</h3>
+      <p class="meta">IESB, Instituto de Ensino Superior de Brasília | 2020 a 2025 (concluído)</p>
+      <p><strong>Láurea acadêmica:</strong> distinção concedida ao aluno com o melhor aproveitamento da turma.</p>
+    </div>
+  </section>
+
+  <section id="certificacoes">
+    <h2>Certificações e cursos</h2>
+    <ul class="certs">
+      <li>Introduction to Cybersecurity <span>(Cisco Networking Academy)</span></li>
+      <li>First Certificate in English, FCE <span>(Cultura Inglesa)</span></li>
+      <li>Minicurso Python para Iniciantes <span>(IESB)</span></li>
+      <li>Minicurso Shell Script e Comandos Básicos do Linux <span>(IESB)</span></li>
+    </ul>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="feat">
+      <p class="eyebrow">Projeto em destaque</p>
+      <h3>Painel de Operações de Transporte Público</h3>
+      <p>Projeto de ponta a ponta com dados fictícios: banco PostgreSQL modelado do zero, geração de dados em Python, consultas SQL, análise em Jupyter e um dashboard interativo com filtros por região, turno e período.</p>
+      <p class="tags">Python · pandas · PostgreSQL · SQL · Streamlit · Jupyter</p>
+      <ul class="contacts"><li><a class="primary" href="https://transporte-dashboard.streamlit.app" target="_blank" rel="noopener">Ver painel online</a></li><li><a href="https://github.com/Mateus-0101/transporte-dashboard" target="_blank" rel="noopener">Ver código</a></li></ul>
+    </div>
+    <h3 class="more">Outros repositórios</h3>
+    <ul class="projs">
+      <li><a href="https://github.com/Mateus-0101/Teste-Node" target="_blank" rel="noopener"><h3>Teste-Node</h3><p>Teste de back-end com Node.js, usando Express e banco de dados MongoDB.</p><span class="tag">CSS, Node.js</span></a></li>
+      <li><a href="https://github.com/Mateus-0101/Teste-de-Backend" target="_blank" rel="noopener"><h3>Teste-de-Backend</h3><p>Teste de desenvolvimento de back-end.</p><span class="tag">JavaScript</span></a></li>
+      <li><a href="https://github.com/Mateus-0101/Teste_REST" target="_blank" rel="noopener"><h3>Teste_REST</h3><p>Projeto de API REST.</p><span class="tag">Python</span></a></li>
+      <li><a href="https://github.com/Mateus-0101/IA" target="_blank" rel="noopener"><h3>IA</h3><p>Testes com algoritmos de inteligência artificial e machine learning.</p><span class="tag">Python</span></a></li>
+      <li><a href="https://github.com/Mateus-0101/Sistemas-de-Controle" target="_blank" rel="noopener"><h3>Sistemas de Controle</h3><p>Lógicas de controle: PID, LGR, diagrama de Bode e outras.</p><span class="tag">Jupyter Notebook</span></a></li>
+      <li><a href="https://github.com/Mateus-0101/OOP" target="_blank" rel="noopener"><h3>OOP</h3><p>Projetos de programação orientada a objetos.</p><span class="tag">Java</span></a></li>
+      <li><a href="https://github.com/Mateus-0101/PDM" target="_blank" rel="noopener"><h3>PDM</h3><p>Programação para dispositivos móveis.</p><span class="tag">Java</span></a></li>
+    </ul>
+    <ul class="contacts"><li><a class="primary" href="https://github.com/Mateus-0101" target="_blank" rel="noopener">Ver todos no GitHub</a></li></ul>
+  </section>
+
+  <footer>Brasília, DF | +55 (61) 99677-5527 | mateusantunes2342@gmail.com</footer>
+</div>
+</body>
+</html>
